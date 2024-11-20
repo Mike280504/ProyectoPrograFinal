@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoProgra.SecondPage">
+    <ScrollView>
+    <StackLayout Padding="20">
+        <Label Text="Tipo de Problema" FontAttributes="Bold" />
+        <Picker x:Name="problemTypePicker">
+            <Picker.Items>
+                <x:String>Baches</x:String>
+                <x:String>Falta de Pavimentación</x:String>
+                <x:String>Alumbrado Público</x:String>
+                <x:String>Problemas de Agua</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Descripción del Problema" FontAttributes="Bold" />
+        <Editor x:Name="descriptionEditor" Placeholder="Describe el problema..." />
+
+        <Label Text="Estado" FontAttributes="Bold" />
+        <Entry x:Name="locationEntry" Placeholder="" />
+
+        <Label Text="Municipio" FontAttributes="Bold" />
+        <Entry x:Name="MunicipioEntry" Placeholder="" />
+
+        <Label Text="Colonia" FontAttributes="Bold" />
+        <Entry x:Name="ColoniaEntry" Placeholder="" />
+
+        <Label Text="Calle" FontAttributes="Bold" />
+        <Entry x:Name="CalleEntry" Placeholder="" />
+
+        <Label Text="Numero Exterior" FontAttributes="Bold" />
+        <Entry x:Name="NumeroExteriorEntry" Placeholder="Opcional" />
+
+        <Button Text="Enviar Reporte" Clicked="OnReportButtonClicked" />
+        <Button Text="Ver Estado del Reporte" Clicked="OnViewReportStatusClicked" />
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

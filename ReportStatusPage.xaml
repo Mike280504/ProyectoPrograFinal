@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoProgra.ReportStatusPage">
+    <ScrollView>
+    <StackLayout Padding="20">
+        <CollectionView x:Name="ReportsCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding TipoProblema}" FontAttributes="Bold" />
+                        <Label Text="{Binding Descripcion}" />
+                        <Label Text="{Binding Estado}" />
+                        <Label Text="{Binding Municipio}" />
+                        <Label Text="{Binding Colonia}" />
+                        <Label Text="{Binding Calle}" />
+                        <Label Text="{Binding NumeroExterior}" />
+                        <Label Text="{Binding Estado_reporte}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+        </ScrollView>
+</ContentPage>

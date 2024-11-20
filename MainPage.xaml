@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoProgra.MainPage">
+    <ScrollView>
+    <StackLayout Padding="20">
+        <Label Text="Correo" FontAttributes="Bold" />
+        <Entry x:Name="EmailEntry" Placeholder="Introduce tu correo" />
+        <Label Text="Contraseña" FontAttributes="Bold" />
+        <Entry x:Name="PasswordEntry" Placeholder="Introduce tu contraseña" IsPassword="True" />
+        <Button Text="Iniciar Sesión" Clicked="OnLoginButtonClicked" />
+        <Button Text="Registrarse" Clicked="OnRegisterButtonClicked" />
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

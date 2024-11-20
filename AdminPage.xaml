@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoProgra.AdminPage">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="Administración de Reportes" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Picker x:Name="StatusPicker" Title="Seleccionar Estado" SelectedIndexChanged="OnStatusPickerChanged">
+                <Picker.Items>
+                    <x:String>Todos</x:String>
+                    <x:String>Pendiente</x:String>
+                    <x:String>En Proceso</x:String>
+                    <x:String>Resuelto</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <CollectionView x:Name="ReportsCollectionView" SelectionMode="Single" SelectionChanged="OnReportSelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding TipoProblema}" FontAttributes="Bold" />
+                            <Label Text="{Binding Descripcion}" />
+                            <Label Text="{Binding Municipio}" />
+                            <Label Text="{Binding Colonia}" />
+                            <Label Text="{Binding Calle}" />
+                            <Picker Title="Estado" SelectedItem="{Binding SelectedReport.Estado_reporte}">
+                                <Picker.Items>
+                                    <x:String>Pendiente</x:String>
+                                    <x:String>En Proceso</x:String>
+                                    <x:String>Resuelto</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Actualizar" Clicked="OnUpdateButtonClicked" HorizontalOptions="Center" Margin="20,10,20,0"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
